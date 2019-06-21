@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wildfirechat.app.mapper.GroupMemberMapper">
+
+    <resultMap id="GroupIds" type="cn.wildfirechat.app.entity.GroupMember">
+        <result column="_gid" jdbcType="VARCHAR" property="gid" />
+    </resultMap>
+
+    <select id="getGroupIds" resultMap="GroupIds">
+        select _gid from t_group_member where _mid = #{_mid}
+    </select>
+
+
+
+</mapper>
+
